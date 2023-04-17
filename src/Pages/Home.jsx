@@ -1,6 +1,9 @@
 // 11. used in parent routes to render children elements. allows nested ui to show when children are rendered
 
 import { Outlet } from "react-router-dom";
+//13. import link element - used to let uer navigate to another page by clicking on. renders an accessible a el with a real href that points to the resource you want
+
+import { Link } from "react-router-dom";
 
 export default function Home() {
 	return (
@@ -26,10 +29,11 @@ export default function Home() {
 				<nav>
 					<ul>
 						<li>
-							<a href={`/contacts/1`}>Your Name</a>
+							{/* 14. use link to point to update the url without rendering another doc */}
+							<Link to={`/contacts/1`}>Your Name</Link>
 						</li>
 						<li>
-							<a href={`/contacts/2`}>Your Friend</a>
+							<Link to={`contacts/2`}>Your Friend</Link>
 						</li>
 					</ul>
 				</nav>
